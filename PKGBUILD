@@ -8,8 +8,10 @@ url="https://github.com/tyyyyyyp/mippfetch"
 license=('MIT')
 depends=()
 makedepends=('rust' 'cargo')
-source=("https://github.com/tyyyyyyp/mippfetch/archive/refs/tags/v${pkgver}.tar.gz")
-md5sums=('SKIP')
+source=("git+https://github.com/tyyyyyyp/mippfetch.git")
+sha256sums=('SKIP')
+
+
 
 build() {
   cd "${srcdir}/mippfetch-${pkgver}"
