@@ -8,6 +8,6 @@ pkgbase = mippfetch
 	makedepends = rust
 	makedepends = cargo
 	source = git+https://github.com/tyyyyyyp/mippfetch.git
-	sha256sums = SKIP
+	md5sums = SKIP
 
 pkgname = mippfetch

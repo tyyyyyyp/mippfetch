@@ -9,18 +9,17 @@ license=('MIT')
 depends=()
 makedepends=('rust' 'cargo')
 source=("git+https://github.com/tyyyyyyp/mippfetch.git")
-sha256sums=('SKIP')
-
-
+md5sums=('SKIP')
 
 build() {
-  cd "${srcdir}/mippfetch-${pkgver}"
-  cargo build --release
+  cd "$srcdir/mippfetch"
+  cargo build --release --target-dir=target
 }
 
 package() {
-  cd "${srcdir}/mippfetch-${pkgver}"
-  install -Dm755 target/release/mippfetch "$pkgdir/usr/bin/mippfetch"
-  install -Dm644 mippfetch.conf "$pkgdir/etc/mippfetch/mippfetch.conf"
+  cd "$srcdir/mippfetch"
+  install -Dm755 "target/release/mippfetch" "$pkgdir/usr/bin/mippfetch"
+  install -Dm644 "mippfetch.conf" "$pkgdir/etc/mippfetch/mippfetch.conf"
 }
+
 
