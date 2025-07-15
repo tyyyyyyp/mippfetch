@@ -7,7 +7,7 @@ pkgbase = mippfetch
 	license = MIT
 	makedepends = rust
 	makedepends = cargo
-	source = https://github.com/tyyyyyyp/mippfetch/archive/refs/tags/v0.1.0.tar.gz
-	md5sums = SKIP
+	source = git+https://github.com/tyyyyyyp/mippfetch.git
+	sha256sums = SKIP
 
 pkgname = mippfetch
